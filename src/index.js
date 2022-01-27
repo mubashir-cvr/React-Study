@@ -11,7 +11,9 @@ function BookList(){
   
   return (
   <section className="booklist">
-    <Book  title={firtsbook.title} h="Next Param"/>
+    <Book  title={firtsbook.title} h="Next Param">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque explicabo ducimus, fuga, porro sed deserunt est alias dolor dicta deleniti fugit, aspernatur quis blanditiis amet debitis reprehenderit itaque quia! Labore.</p>
+    </Book>
     <Book title="My Title1" h="Next Param"/>
     <Book title="My Title2" h="Next Param"/>
     <Book title="My Title3" h="Next Param"/>
@@ -21,13 +23,14 @@ function BookList(){
   );
 }
 
-const Book=(prop) =>{
-  const title="My Book";
+const Book=({title,h,children}) =>{
+  
   return <section className="book">
   
   <Image/>
-  <h2>{prop.title}</h2>
-  <p>{prop.h}</p>
+  <h2>{title}</h2>
+  <p>{h}</p>
+  {children}
   </section>
   }
 const Image=() =>{return <img src="https://dummyimage.com/150x200.gif?text=book" />}
