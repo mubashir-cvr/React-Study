@@ -1,24 +1,32 @@
 import React from "react"
 import ReactDOM from "react-dom"
+
+import './index.css'
 function BookList(){
   
   return (
-  <section>
-    <Book/>
+  <section className="booklist">
+    <Book  title="My Title"/>
+    <Book title="My Title1"/>
+    <Book title="My Title2"/>
+    <Book title="My Title3"/>
     
     
   </section>
   );
 }
 
-const Book=() =>{
-  return <div>
-  <h4>My book</h4>
+const Book=(prop) =>{
+  const title="My Book";
+  return <section className="book">
+  
   <Image/>
-  </div>
+  <h2>{prop.title}</h2>
+  <Title/>
+  </section>
   }
-const Image=() =>{return <img width={100} src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" />}
-const Message=() =><p>My Message</p>
+const Image=() =>{return <img src="https://dummyimage.com/150x200.gif?text=book" />}
+const Title=() =><p>My Message</p>
 
 // const  BookList =()=> {
 //   return React.createElement('div',{},React.createElement('h1',{},'Hi'))
