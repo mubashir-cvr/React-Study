@@ -2,14 +2,19 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 import './index.css'
+
+const firtsbook={
+  title:"My Title from dict",
+
+}
 function BookList(){
   
   return (
   <section className="booklist">
-    <Book  title="My Title"/>
-    <Book title="My Title1"/>
-    <Book title="My Title2"/>
-    <Book title="My Title3"/>
+    <Book  title={firtsbook.title} h="Next Param"/>
+    <Book title="My Title1" h="Next Param"/>
+    <Book title="My Title2" h="Next Param"/>
+    <Book title="My Title3" h="Next Param"/>
     
     
   </section>
@@ -22,7 +27,7 @@ const Book=(prop) =>{
   
   <Image/>
   <h2>{prop.title}</h2>
-  <Title/>
+  <p>{prop.h}</p>
   </section>
   }
 const Image=() =>{return <img src="https://dummyimage.com/150x200.gif?text=book" />}
