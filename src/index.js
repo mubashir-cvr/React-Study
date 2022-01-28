@@ -39,14 +39,19 @@ const Book=(props) =>{
       alert("Clicked")
 
     }
+    const complexExample=(author)=>{
+      console.log(author)
 
-  const {img,title,auth} = props
+    }
+
+  const {img,title,author} = props
   return <section className="book">
   
   <Image/>
   <h2 onClick={()=>console.log("Inline Event")}>{title}</h2>
-  <p>{auth}</p>
+  <p>{author}</p>
   <button onClick={clickHandler}>Example</button>
+  <button onClick={()=>complexExample(author)}>Argument fnction Button</button>
   </section>
   }
 const Image=() =>{return <img src="https://dummyimage.com/150x200.gif?text=book" />}
