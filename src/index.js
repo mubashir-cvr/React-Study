@@ -44,7 +44,7 @@ const Book=(props) =>{
   return <section className="book">
   
   <Image/>
-  <h2>{title}</h2>
+  <h2 onClick={()=>console.log("Inline Event")}>{title}</h2>
   <p>{auth}</p>
   <button onClick={clickHandler}>Example</button>
   </section>
