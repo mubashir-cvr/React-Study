@@ -32,12 +32,21 @@ function BookList(){
 }
 
 const Book=(props) =>{
+  //Attribute, eventHandler
+  // onClick ,onMouseHover
+
+    const clickHandler = () =>{
+      alert("Clicked")
+
+    }
+
   const {img,title,auth} = props
   return <section className="book">
   
   <Image/>
   <h2>{title}</h2>
   <p>{auth}</p>
+  <button onClick={clickHandler}>Example</button>
   </section>
   }
 const Image=() =>{return <img src="https://dummyimage.com/150x200.gif?text=book" />}
