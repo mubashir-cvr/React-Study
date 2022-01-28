@@ -6,7 +6,7 @@ import './index.css'
 const books=[{
   id:1,
   img:"https://dummyimage.com/150x200.gif?text=book",
-  title:"My Title from dict",
+  title:"My Title from dict1",
   author:"Author"
 
 },
@@ -14,7 +14,7 @@ const books=[{
   id:2,
   img:"https://dummyimage.com/150x200.gif?text=book",
 
-  title:"My Title from dict",
+  title:"My Title from dict2",
   author:"Author"
 
 
@@ -35,8 +35,10 @@ const Book=(props) =>{
   //Attribute, eventHandler
   // onClick ,onMouseHover
 
-    const clickHandler = () =>{
-      alert("Clicked")
+    const clickHandler = (e) =>{
+      console.log(e);
+      console.log(e.target);
+      console.log("Clicked");
 
     }
     const complexExample=(author)=>{
@@ -45,7 +47,10 @@ const Book=(props) =>{
     }
 
   const {img,title,author} = props
-  return <section className="book">
+  return <section className="book" onMouseOver={()=>{
+    console.log(title)
+
+  }}>
   
   <Image/>
   <h2 onClick={()=>console.log("Inline Event")}>{title}</h2>
